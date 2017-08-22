@@ -1,16 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <!-- bootstrap cdn-->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+      crossorigin="anonymous">
    <title>Document</title>
+   <style>
+      form {
+         max-width: 100px;
+      }
+
+      button {
+         margin: 10px;
+      }
+
+      .keybutton {
+      /* display: flex;
+      flex-wrap: wrap; */
+   
+      
+      }
+      .hangicon {
+         width: 100px;
+         height: auto;
+      }
+      
+      h1 {
+         font-size: 70px;
+      }
+   
+   </style>
+
 </head>
+
 <body>
+      <div class="jumbotron">
+            <h1>HangMan <img class="hangicon" src="assets/images/hangman.png" alt=""></h1> 
+            <p>Guess correctly or lose</p> 
+          </div>
+          
+   <div class="container">
+   <div class="keybutton">
+      <button class="keypress btn btn-primary">a</button>
+      <button class="keypress btn btn-primary">b</button>
+      <button class="keypress btn btn-primary">c</button>
+      <button class="keypress btn btn-primary">d</button>
+      <button class="keypress btn btn-primary">e</button>
+      <button class="keypress btn btn-primary">f</button>
+      <button class="keypress btn btn-primary">g</button>
+      <button class="keypress btn btn-primary">h</button>
+      <button class="keypress btn btn-primary">i</button>
+      <button class="keypress btn btn-primary">j</button>
+      <button class="keypress btn btn-primary">k</button>
+      <button class="keypress btn btn-primary">l</button>
+      <button class="keypress btn btn-primary">m</button>
+      <button class="keypress btn btn-primary">n</button>
+      <button class="keypress btn btn-primary">o</button>
+      <button class="keypress btn btn-primary">p</button>
+      <button class="keypress btn btn-primary">q</button>
+      <button class="keypress btn btn-primary">r</button>
+      <button class="keypress btn btn-primary">s</button>
+      <button class="keypress btn btn-primary">t</button>
+      <button class="keypress btn btn-primary">u</button>
+      <button class="keypress btn btn-primary">v</button>
+      <button class="keypress btn btn-primary">w</button>
+      <button class="keypress btn btn-primary">x</button>
+      <button class="keypress btn btn-primary">y</button>
+      <button class="keypress btn btn-primary">x</button>
+   </div>
+
+
+   <p id="guess"></p>
+
+   <div>
+      <form action="">
+         <input id="enteredLetter" class="form-control" type "text">
+         <button class="btn" onclick="displayLetter(); return false;"> Check It</button></br>
+      </form>
+   </div>
+
+   <div>
+      <button id="solveIt" class="btn"> Solve It</button>
+   </div>
+
+   <!-- This displays list of used letters -->
+   <ol id="orderList">
+
+   </ol>
+</div>
+
+
+
+
+
+   <!-- Start //////////////////////////////////////////////////////////////////////////Java Script -->
    <script>
+      //selects random word;
+      var arrayWord = ["honda", "bmw", "audi", "mercedes"];
+      var randIndex = Math.random() * arrayWord.length;
+      randIndex = Math.floor(randIndex);
+      var randWord = arrayWord[randIndex];
+
+
+      // finds how many letters in a word and creates as many input fields
+      for (var i = 0; i < randWord.length; i++) {
+         myFunction();
+      }
+
+      // input field generator
+      function myFunction() {
+         var InputField = document.createElement("INPUT");
+         document.body.appendChild(InputField);
+      }
+
+      // asks to guess the word
+      if (randWord.length != 0) {
+         document.getElementById("guess").innerHTML = "Please guess a " + randWord.length + "word";
+      }
+
+      //creates and displays used letters into a list
+      function displayLetter() {
+         var enteredLetter = document.getElementById("enteredLetter").value;
+         var node = document.createElement("LI");
+         var textnode = document.createTextNode(enteredLetter);
+         node.appendChild(textnode);
+         document.getElementById("orderList").appendChild(node);
+      }
+
+ //TODO:Change li and search for input values
+ document.getElementById("solveIt").addEventListener("click", () => {
+
+         var solveItArray = [];
+         var randWordArray = [];
+         for (var i = 0; i < randWord.length; i++) {
+            var letterInput = document.querySelectorAll("li")[i].innerHTML;
+            solveItArray.push(letterInput);
+            var generatedLetters = randWord[i];
+            randWordArray.push(generatedLetters);
+         }
+         var joinedWord = solveItArray.join("");
+         console.log(joinedWord);
+         console.log(randWord);
+
+         if (joinedWord == randWord) {
+            console.log("you win");
+         } else { console.log("you lose"); }
+
+      });
+
+      //----------------------------------------------------------------------------------------------
+      // TODO:write new code below then move it up
+
+     
+
+
+
+
+
+
+
+
+//          var solveItArray = [];
+//          var randWordArray = [];
+//          for (var i = 0; i < randWord.length; i++) {
+//             var letterInput = document.querySelectorAll("li")[i].innerHTML;
+//             solveItArray.push(letterInput);
+//             var generatedLetters = randWord[i];
+//             randWordArray.push(generatedLetters);
+//          }}
+
+
+
+
+
+
+//       document.getElementById("solveIt").addEventListener("click", ()=>{
+//          var solveItArray = [];
+//          var randWordArray = [];
+//          for (var i = 0; i < randWord.length; i++) {
+//             var letterInput = document.querySelectorAll("li")[i].innerHTML;
+//             solveItArray.push(letterInput);
+//             var generatedLetters = randWord[i];
+//             randWordArray.push(generatedLetters);
+//          }
+//          console.log(solveItArray[i]);
+//          console.log(randWordArray[i]);
+//          if (solveItArray.length != randWordArray.length) 
+//    return false;
+
+// for (var i=0;i<solveItArray.length;i++)
+// {
+//     if (solveItArray[i]!=randWordArray[i])
+//     {
+//        return false;
+//     }
+// }
+// return true;
+
+
+
+
+
+         // if (solveItArray == randWordArray){
+         //    console.log("it works");
+         // } else { console.log("it doesnt work")};
+
+
+
+
+
+
+
+
+
+         // var inputKeyLi = document.getElementById("orderList");  
+
+         // console.log(inputKeyLi);
+
+      //   var inputFormArray = .querySelectorAll("li");
+
+      //    console.log(inputFormArray[o]);
+
+      //  for (var i = 0; i < randWord.length; i++) {
+
+      //    console.log(inputFormArray[i]);
+      //  }
+
+
+
+
+
+
+
+
+
+         //---------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      //TODO:using query selector
+// var inputArray = document.querySelectorAll("input");
+//       inputArray[0].style.borderColor = "red";
+//       inputArray[0].addEventListener("blur", (event) => {
+//          var hit = event.target.value;
+//          if (hit !== ""){
+//          alert("are you sure you want to submit this letter");
+//          } else {
+//          }
+//       })
    </script>
 
-   
-   
+
+
+
+
+
 </body>
+
 </html>
