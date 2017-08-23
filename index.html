@@ -99,11 +99,13 @@
       var randIndex = Math.random() * arrayWord.length;
       randIndex = Math.floor(randIndex);
       var randWord = arrayWord[randIndex];
+      
 
       // finds how many letters in a word and creates as many input fields
       for (var i = 0; i < randWord.length; i++) {
          myFunction();
       }
+
 
       // input field generator
       function myFunction() {
@@ -111,10 +113,50 @@
          document.body.appendChild(InputField);
       }
 
+
       // asks to guess the word
       if (randWord.length != 0) {
          document.getElementById("guess").innerHTML = "Please guess a " + randWord.length + " letter word";
       }
+
+
+     // detects button pressed
+     document.getElementById("buttonkeysdiv").addEventListener("click",(e)=>{ 
+      var pressedLetter = e.target.innerHTML;
+      console.log(e.target);
+      e.target.classList.remove("btn-primary");
+      e.target.disabled = true;
+         searchWord(pressedLetter);
+      })
+
+
+      // Search to see if letter is part of random word
+      function searchWord (wasPressed) {
+         console.log(randWord);
+         if (randWord.includes(wasPressed)){
+            console.log("the letter "+ wasPressed);
+            //TODO:set function to add letter
+            findLetterLocation(wasPressed);
+         } else{console.log("can't find pressed valuse");
+         //TODO:Write action for word not found.
+         }
+      }
+
+
+      // This function finds the location of the existing word
+      function findLetterLocation(pressedLocation){
+            for (var i = 0; i < randWord.length; i++) {
+                  if (index of randWord[i]){
+
+                  }
+                  
+            }
+            
+      }
+
+
+
+
 
       //creates and displays used letters into a list
       function displayLetter() {
@@ -156,17 +198,7 @@
       // TODO:write new code below then move it up
 
 
-      // detects button pressed
-      document.getElementById("buttonkeysdiv").addEventListener("click",(e)=>{
-         
-         var pressedLetter = e.target.innerHTML;
-         console.log(e.target);
-        e.target.classList.remove("btn-primary");
-        e.target.disabled = true;
-         
-        
-      })
-
+ 
       
 
 
