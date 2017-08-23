@@ -16,7 +16,6 @@
 
       button {
          margin: 5px;
-      
       }
 
       .hangicon {
@@ -69,13 +68,15 @@
       </div>
 
       <h2 id="guess"></h2>
-
-      <div>
+      <!-- TODO:remember this div works with the Solve now function -->
+      <!-- FIXME:Make sure you find another way to anable this feature -->
+      <!-- 
+         <div>
          <form action="">
             <input id="enteredLetter" class="form-control" type "text">
             <button class="btn" onclick="displayLetter(); return false;"> Check It</button></br>
          </form>
-      </div>
+      </div> -->
 
       <div>
          <button id="solveIt" class="btn"> Solve It</button>
@@ -86,7 +87,9 @@
       </ol>
    </div>
 
-   <input type="button"  class="btn" value="New Game" onClick="window.location.reload()">
+   <button type="button" class="btn" value="New Game" onClick="window.location.reload()">Restart Game</button>
+
+
 
 
 
@@ -99,7 +102,7 @@
       var randIndex = Math.random() * arrayWord.length;
       randIndex = Math.floor(randIndex);
       var randWord = arrayWord[randIndex];
-      
+
 
       // finds how many letters in a word and creates as many input fields
       for (var i = 0; i < randWord.length; i++) {
@@ -120,39 +123,41 @@
       }
 
 
-     // detects button pressed
-     document.getElementById("buttonkeysdiv").addEventListener("click",(e)=>{ 
-      var pressedLetter = e.target.innerHTML;
-      console.log(e.target);
-      e.target.classList.remove("btn-primary");
-      e.target.disabled = true;
+      // detects button pressed
+      document.getElementById("buttonkeysdiv").addEventListener("click", (e) => {
+         var pressedLetter = e.target.innerHTML;
+         console.log(e.target);
+         e.target.classList.remove("btn-primary");
+         e.target.disabled = true;
          searchWord(pressedLetter);
       })
 
 
       // Search to see if letter is part of random word
-      function searchWord (wasPressed) {
+      function searchWord(wasPressed) {
          console.log(randWord);
-         if (randWord.includes(wasPressed)){
-            console.log("the letter "+ wasPressed);
+         if (randWord.includes(wasPressed)) {
+            console.log("the letter " + wasPressed);
             //TODO:set function to add letter
             findLetterLocation(wasPressed);
-         } else{console.log("can't find pressed valuse");
-         //TODO:Write action for word not found.
+         } else {            
+            console.log("can't find pressed valuse");
+            //TODO:Write action for word not found.
          }
       }
 
 
       // This function finds the location of the existing word
-      function findLetterLocation(pressedLocation){
-            for (var i = 0; i < randWord.length; i++) {
-                  if (index of randWord[i]){
-
-                  }
-                  
-            }
+      function findLetterLocation(pressedLocation) {
+         for (var i = 0; i < randWord.length; i++) {
+            if (randWord[i] == pressedLocation) {
             
-      }
+            document.querySelectorAll("input")[i].value = pressedLocation;
+
+            }
+         } 
+      }    
+      
 
 
 
@@ -187,8 +192,8 @@
          } else { console.log("you lose"); }
 
       });
-      
-      
+
+
 
 
 
@@ -198,8 +203,8 @@
       // TODO:write new code below then move it up
 
 
- 
-      
+
+
 
 
 
