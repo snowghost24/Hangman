@@ -2,264 +2,265 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <!-- bootstrap cdn-->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-      crossorigin="anonymous">
-   <title>HangMan</title>
-   <style>
-      #solveForm {
-         max-width: 100px;
-      }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- bootstrap cdn-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+	 crossorigin="anonymous">
+	<title>HangMan</title>
+	<style>
+		#solveForm {
+			max-width: 100px;
+		}
 
-      button {
-         margin: 5px;
-      }
+		button {
+			margin: 5px;
+		}
 
-      .hangicon {
-         width: 100px;
-         height: auto;
-      }
+		.hangicon {
+			width: 100px;
+			height: auto;
+		}
 
-      h1 {
-         font-size: 70px;
-         text-align: center;
-      }
+		h1 {
+			font-size: 70px;
+			text-align: center;
+		}
 
-      h2 {
-         text-align: center;
-         margin-top: 40px;
-      }
+		h2 {
+			text-align: center;
+			margin-top: 40px;
+		}
 
-      input {
-         margin: 8px;
-         max-width: 60px;
-         border-radius: 4px;
-         text-align: center;
-         color: green;
-         font-size: 18px;
-         font-weight: bold;
-      }
+		input {
+			margin: 8px;
+			max-width: 60px;
+			border-radius: 4px;
+			text-align: center;
+			color: green;
+			font-size: 18px;
+			font-weight: bold;
+		}
 
 
 
-      #lettersDiv {
-         display: flex;
-         justify-content: center;
-         margin-top: 60px;
-      }
-   </style>
+		#lettersDiv {
+			display: flex;
+			justify-content: center;
+			margin-top: 60px;
+		}
+	</style>
 </head>
 
 <body>
-   <div class="container">
-      <div class="jumbotron">
-         <h1>HangMan <img class="hangicon" src="assets/images/hangman.png" alt=""></h1>
-         <p>Guess correctly or lose</p>
-         <h3>Press any key to start the game or Press button on the screen</h3>
-      </div>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>HangMan <img class="hangicon" src="assets/images/hangman.png" alt=""></h1>
+			<p>Guess correctly or lose</p>
+			<h3>Press any key to start the game or Press button on the screen</h3>
+		</div>
 
-      <div id="buttonkeysdiv" class="keybutton">
-         <button class="keypress btn btn-primary">a</button>
-         <button class="keypress btn btn-primary">b</button>
-         <button class="keypress btn btn-primary">c</button>
-         <button class="keypress btn btn-primary">d</button>
-         <button class="keypress btn btn-primary">e</button>
-         <button class="keypress btn btn-primary">f</button>
-         <button class="keypress btn btn-primary">g</button>
-         <button class="keypress btn btn-primary">h</button>
-         <button class="keypress btn btn-primary">i</button>
-         <button class="keypress btn btn-primary">j</button>
-         <button class="keypress btn btn-primary">k</button>
-         <button class="keypress btn btn-primary">l</button>
-         <button class="keypress btn btn-primary">m</button>
-         <button class="keypress btn btn-primary">n</button>
-         <button class="keypress btn btn-primary">o</button>
-         <button class="keypress btn btn-primary">p</button>
-         <button class="keypress btn btn-primary">q</button>
-         <button class="keypress btn btn-primary">r</button>
-         <button class="keypress btn btn-primary">s</button>
-         <button class="keypress btn btn-primary">t</button>
-         <button class="keypress btn btn-primary">u</button>
-         <button class="keypress btn btn-primary">v</button>
-         <button class="keypress btn btn-primary">w</button>
-         <button class="keypress btn btn-primary">x</button>
-         <button class="keypress btn btn-primary">y</button>
-         <button class="keypress btn btn-primary">x</button>
-      </div>
+		<div id="buttonkeysdiv" class="keybutton">
+			<button class="keypress btn btn-primary">a</button>
+			<button class="keypress btn btn-primary">b</button>
+			<button class="keypress btn btn-primary">c</button>
+			<button class="keypress btn btn-primary">d</button>
+			<button class="keypress btn btn-primary">e</button>
+			<button class="keypress btn btn-primary">f</button>
+			<button class="keypress btn btn-primary">g</button>
+			<button class="keypress btn btn-primary">h</button>
+			<button class="keypress btn btn-primary">i</button>
+			<button class="keypress btn btn-primary">j</button>
+			<button class="keypress btn btn-primary">k</button>
+			<button class="keypress btn btn-primary">l</button>
+			<button class="keypress btn btn-primary">m</button>
+			<button class="keypress btn btn-primary">n</button>
+			<button class="keypress btn btn-primary">o</button>
+			<button class="keypress btn btn-primary">p</button>
+			<button class="keypress btn btn-primary">q</button>
+			<button class="keypress btn btn-primary">r</button>
+			<button class="keypress btn btn-primary">s</button>
+			<button class="keypress btn btn-primary">t</button>
+			<button class="keypress btn btn-primary">u</button>
+			<button class="keypress btn btn-primary">v</button>
+			<button class="keypress btn btn-primary">w</button>
+			<button class="keypress btn btn-primary">x</button>
+			<button class="keypress btn btn-primary">y</button>
+			<button class="keypress btn btn-primary">x</button>
+		</div>
 
-      <!-- displays game question -->
-      <h2 id="guess"></h2>
+		<!-- displays game question -->
+		<h2 id="guess"></h2>
 
-      <!-- displays generated letters -->
-      <div id="lettersDiv"></div>
-      
-      <h4> Guesses remaining: </h4><div class="remainingGuesses"></div>
-      <h4> Wins: </h4>
-      <div class="numberOfWins"></div>
-      <h4> Loses: </h4>
-      <div class="numberOfLosses"></div>
-      <button type="button" onclick="pullRandomWord()"></button>
+		<!-- displays generated letters -->
+		<div id="lettersDiv"></div>
 
-      <!-- Restarts Game -->
-      <button type="button" class="btn" value="New Game" onClick="window.location.reload()">Restart Game</button>
-   </div>
+		<h4> Guesses remaining:
+			<div id="remainingGuesses">6</div>
+		</h4>
 
+		<h4> Win Streak:
+			<div id="numberOfWins">0</div>
+		</h4>
+<!-- 
+		<h4> Loses: </h4>
+		<div class="numberOfLosses"></div>
+		<button type="button" onclick="pullRandomWord()"></button> -->
 
-
-
-
-   <!-- Start //////////////////////////////////////////////////////////////////////////Java Script -->
-   <script>
-      //selects random word;
-      var score = 0;
-      var numberOfWins = 0;
-      var guessesleft = 10;
-      var arrayWord = ["honda", "bmw", "audi", "mercedes"];
-     
-      // removes list items when a new game is generated
-      function removeLi() {
-         var liArray = document.querySelectorAll("input");
-         if (liArray.length > 0) {
-            var myNode = document.getElementById("lettersDiv");
-            while (myNode.firstChild) {
-               myNode.removeChild(myNode.firstChild);
-            }
-         }
-      }
-
-
-      function reEnableKeys(){
-         var toBeEnable = document.getElementsByClassName("keypress");
-         for (var i = 0; i < toBeEnable.length;i++){
-            toBeEnable[i].disabled=false;
-
-         }
-      }
-
-
-      // creates a random number and selects a random letter from array
-      function pullRandomWord() {
-         var randIndex = Math.random() * arrayWord.length;
-         randIndex = Math.floor(randIndex);
-         var randWord = arrayWord[randIndex];
-         window.randWord = randWord;
-         // TODO:call these functions when a new game is generated
-         removeLi();
-         guessword();
-         reEnableKeys();
-         
-         // finds how many letters in a word and creates as many input fields
-         for (var i = 0; i < randWord.length; i++) {
-            myFunction();
-         }
-         disableIt();
-      }
-
-
-      // This function is used to generate the first game 
-      do {
-         pullRandomWord();
-      } while (score < -1);
-
-
-      // input field generator
-      function myFunction() {
-         var InputField = document.createElement("INPUT");
-         // InputField.className = 'form-control';
-         document.getElementById("lettersDiv").appendChild(InputField);
-         
-      }
-
-
-      // asks to guess the word
-      function guessword() {
-         document.getElementById("guess").innerHTML = "Please guess a " + randWord.length + " letter word";
-      }
-
-     
-     
-
-
-      // detects button pressed and disables key
-      // function findKey () {}
-      document.addEventListener("keyup", (event) => {
-         var x = event.key;
-         console.log(x);
-         var buttonArray = document.querySelectorAll(".keypress");
-         // console.log(buttonArray);
-         for (var i = 0; i < buttonArray.length; i++) {
-            var foundLetter = buttonArray[i].innerHTML;
-            if (foundLetter == x){ 
-               buttonArray[i].disabled = true;
-               searchWord(x);
-            //    console.log( indexofbuttonArray[i].innerHTML);
-            //  buttonArray[i].disabled = true;
-            }
-         }
-      })
-
-
-      // detects button pressed on keyboard on screen and disables key
-      document.getElementById("buttonkeysdiv").addEventListener("click", (e) => {
-         var pressedLetter = e.target.innerHTML;
-         console.log(e.target);
-         e.target.classList.remove("btn-primary");
-         e.target.disabled = true;
-         searchWord(pressedLetter);
-      })
-
-
-      // Search to see if letter is part of random word
-      function searchWord(wasPressed) {
-         console.log(randWord);
-         if (randWord.includes(wasPressed)) {
-            console.log("the letter " + wasPressed);
-            //TODO:set function to add letter
-            findLetterLocation(wasPressed);
-         } else {
-            console.log("can't find pressed valuse");
-            //TODO:Write action for word not found.
-         }
-      }
-
-
-      // This function finds the location of the existing word
-      function findLetterLocation(pressedLocation) {
-         for (var i = 0; i < randWord.length; i++) {
-            if (randWord[i] == pressedLocation) {
-               document.querySelectorAll("input")[i].value = pressedLocation;
-               checkDone();
-            }
-         }
-      }
+		<!-- Restarts Game -->
+		<button type="button" class="btn" value="New Game" onClick="window.location.reload()">Restart Game</button>
+	</div>
 
 
 
-// disables input buttons 
-      function disableIt () {
-            for (var i = 0; i < randWord.length; i++) {
-                  document.querySelectorAll("input")[i].disabled = true;
-                  console.log("im in the loop");
-
-            }
-      }
-
-      // Adding to wins column 
-      function checkDone () {
-         
-for (var i = 0; i < array.length; i++) {
-   var element = array[i];
-   
-}
-
-      }
 
 
+	<!-- Start //////////////////////////////////////////////////////////////////////////Java Script -->
+	<script>
+		//selects random word;
 
-   </script>
+		var numberOfWins = 0;
+		var guessesLeft = 6;
+		var wordLetterCount = 0;
+		var arrayWord = ["honda", "bmw", "audi", "mercedes","chrysler","ford","lincoln","ram","jeep","dodge","buick","cadillac","chevrolet","tesla","mercury","porsche","volkswagen","maserati","fiat","kia","ferrari","lamborghini","datsun","acura","mazda","nissan","mitsubishi","infiniti","subaru","toyota","kia","volvo","saab","bentley"];
+		var lettersGuessedArray = [];
+		var myInputs = document.querySelectorAll("input");
+
+		// removes list items when a new game is generated
+		function removeLi() {
+			var liArray = document.querySelectorAll("input");
+			if (liArray.length > 0) {
+				var myNode = document.getElementById("lettersDiv");
+				while (myNode.firstChild) {
+					myNode.removeChild(myNode.firstChild);
+				}
+			}
+		}
+
+
+		function reEnableKeys() {
+			var toBeEnable = document.getElementsByClassName("keypress");
+			for (var i = 0; i < toBeEnable.length; i++) {
+				toBeEnable[i].disabled = false;
+				toBeEnable[i].classList.add("btn-primary");
+			}
+		}
+
+
+		// creates a random number and selects a random letter from array
+		function pullRandomWord() {
+			var randIndex = Math.floor(Math.random() * arrayWord.length);
+			var randWord = arrayWord[randIndex];
+			window.randWord = randWord;
+			removeLi();
+			guessword();
+			reEnableKeys();
+
+			// finds how many letters in a word and creates as many input fields
+			for (var i = 0; i < randWord.length; i++) {
+				var InputField = document.createElement("INPUT");
+				document.getElementById("lettersDiv").appendChild(InputField);
+			}
+			disableIt();
+		}
+
+
+		// This function is used to generate the first game 
+		do {
+			pullRandomWord();
+		} while (numberOfWins < -1);
+
+
+		// asks to guess the word
+		function guessword() {
+			document.getElementById("guess").innerHTML = "Guess a " + randWord.length + " letter car manufacture";
+		}
+
+		// disables input buttons 
+		function disableIt() {
+			for (var i = 0; i < randWord.length; i++) {
+				document.querySelectorAll("input")[i].disabled = true;
+			}
+		}
+
+
+		// detects button pressed and disables key
+		// function findKey () {}
+		document.addEventListener("keyup", (event) => {
+			var x = event.key;
+			var buttonArray = document.querySelectorAll(".keypress");
+			for (var i = 0; i < buttonArray.length; i++) {
+				var foundLetter = buttonArray[i].innerHTML;
+				if (foundLetter == x) {
+					buttonArray[i].disabled = true;
+					buttonArray[i].classList.remove("btn-primary");
+					searchWord(x);
+				}
+			}
+		})
+
+
+		// detects button pressed on screen keyboard and disables key
+		document.getElementById("buttonkeysdiv").addEventListener("click", (e) => {
+			var pressedLetter = e.target.innerHTML;
+			e.target.classList.remove("btn-primary");
+			e.target.disabled = true;
+			searchWord(pressedLetter);
+		})
+
+//TODO:remember to reset lettersgussedarray
+
+		// Check to see if letter is part of random word
+		function searchWord(wasPressed) {
+			if (randWord.includes(wasPressed) == true && lettersGuessedArray.indexOf(wasPressed) == -1 ) {
+				lettersGuessedArray.push(wasPressed);
+				findLetterLocation(wasPressed);
+			} else if (randWord.includes(wasPressed) == false && lettersGuessedArray.indexOf(wasPressed) == -1 ){
+				lettersGuessedArray.push(wasPressed);
+				guessesLeft -= 1;
+				document.getElementById("remainingGuesses").innerHTML = guessesLeft;
+				if (guessesLeft == 0) {
+					alert("You Lost the maker was " + randWord);
+					guessesLeft = 6;
+					numberOfWins = 0;
+					wordLetterCount = 0;
+					lettersGuessedArray=[];
+					document.getElementById("remainingGuesses").innerHTML = guessesLeft;
+						document.getElementById("numberOfWins").innerHTML = numberOfWins;
+					pullRandomWord();
+				}
+			}
+		}
+
+
+		// This function finds the location of the existing word
+		function findLetterLocation(pressedLocation) {
+			for (var i = 0; i < randWord.length; i++) {
+				if (randWord[i] == pressedLocation) {
+					document.querySelectorAll("input")[i].value = pressedLocation;
+					wordLetterCount += 1;
+					console.log(wordLetterCount);
+					if (wordLetterCount == randWord.length) {
+						youWon();
+					}
+				}
+			}
+		}
+
+
+		function youWon() {
+			setTimeout(pullRandomWord(), 2000);
+			wordLetterCount = 0;
+			 guessesLeft = 6;
+			numberOfWins += 1;
+			lettersGuessedArray = [];
+			remainingGuesses
+			document.getElementById("remainingGuesses").innerHTML = guessesLeft;
+			document.getElementById("numberOfWins").innerHTML = numberOfWins;
+			console.log("number of wins is " + numberOfWins);
+		}
+	</script>
 </body>
 
 </html>
