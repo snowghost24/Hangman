@@ -27,12 +27,28 @@ function reEnableKeys() {
    }
 }
 
+//////////////////////////////////////////////////////
 
+
+
+
+
+
+
+////////////////////////////////////////////////////
 // creates a random number and selects a random letter from array
 function pullRandomWord() {
    var randIndex = Math.floor(Math.random() * arrayWord.length);
-   var randWord = arrayWord[randIndex];
+   var randWordPre = arrayWord[randIndex];
+   var wordIndex = arrayWord.indexOf(randWordPre);
+   var splicedWord = arrayWord.splice(wordIndex, 1);
+   var randWord = splicedWord.toString();
    window.randWord = randWord;
+   console.log(arrayWord);
+   console.log(randWord);
+   // var randIndex = Math.floor(Math.random() * arrayWord.length);
+   // var randWord = arrayWord[randIndex];
+   // window.randWord = randWord;
    removeLi();
    guessword();
    reEnableKeys();
@@ -89,7 +105,6 @@ document.getElementById("buttonkeysdiv").addEventListener("click", (e) => {
    searchWord(pressedLetter);
 })
 
-//TODO:remember to reset lettersgussedarray
 
 // Check to see if letter is part of random word
 function searchWord(wasPressed) {
