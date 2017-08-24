@@ -6,31 +6,158 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Document</title>
    <style>
-         .late{
-            background-color:#fff;
+         span {
+               border-bottom: 6px solid black;
+               margin-left: 3px;
+               margin-right: 3px;
+
          }
-   
+
    </style>
 </head>
 <body>
-      <p class="late"></p>
-      <!-- var myFarm = ["chickens", "pigs", "cows", "horses", "ostriches"];
-      ```
-      
-      * Then check if the first letter in the animal's name begins with a "c" or "o". If it does, create an alert saying, "Starts with 'c' or 'o'!" -->
-   <script>
-      // var myFarm = ["chickens", "pigs", "cows", "horses", "ostriches"]
-      // for (var i = 0; i < myFarm.length; i++) {
-      //    console.log(myFarm[i]);
-      //    var firstLetter = myFarm[i].substring(0, 1);
-      //    if ( firstLetter == "c" || firstLetter == "o" ) {
-      //      console.log(myFarm[i] + " starts with c or o");
-      //    }
+     
+<div>
+<input id="man"></input>
+</div>
+
+
+
+      <script>
+           var letter = ["a","b","c"];
+           console.log(letter.indexOf("c"));
+
+            
+
+
+             //creates and displays used letters into a list
+      // function displayLetter() {
+      //    var enteredLetter = document.getElementById("enteredLetter").value;
+      //    var node = document.createElement("LI");
+      //    var textnode = document.createTextNode(enteredLetter);
+      //    node.appendChild(textnode);
+      //    document.getElementById("orderList").appendChild(node);
       // }
+
+
+      //TODO:Change li and search for input values
+      // document.getElementById("solveIt").addEventListener("click", () => {
+
+      //    var solveItArray = [];
+      //    var randWordArray = [];
+      //    for (var i = 0; i < randWord.length; i++) {
+      //       var letterInput = document.querySelectorAll("li")[i].innerHTML;
+      //       solveItArray.push(letterInput);
+      //       var generatedLetters = randWord[i];
+      //       randWordArray.push(generatedLetters);
+      //    }
+      //    var joinedWord = solveItArray.join("");
+      //    console.log(joinedWord);
+      //    console.log(randWord);
+
+      //    if (joinedWord == randWord) {
+      //       console.log("you win");
+      //    } else { console.log("you lose"); }
+
+      // });
+
+
+      //----------------------------------------------------------------------------------------------
+      // TODO:write new code below then move it up
+
+//          var solveItArray = [];
+//          var randWordArray = [];
+//          for (var i = 0; i < randWord.length; i++) {
+//             var letterInput = document.querySelectorAll("li")[i].innerHTML;
+//             solveItArray.push(letterInput);
+//             var generatedLetters = randWord[i];
+//             randWordArray.push(generatedLetters);
+//          }}
+
+
+//       document.getElementById("solveIt").addEventListener("click", ()=>{
+//          var solveItArray = [];
+//          var randWordArray = [];
+//          for (var i = 0; i < randWord.length; i++) {
+//             var letterInput = document.querySelectorAll("li")[i].innerHTML;
+//             solveItArray.push(letterInput);
+//             var generatedLetters = randWord[i];
+//             randWordArray.push(generatedLetters);
+//          }
+//          console.log(solveItArray[i]);
+//          console.log(randWordArray[i]);
+//          if (solveItArray.length != randWordArray.length) 
+//    return false;
+
+// for (var i=0;i<solveItArray.length;i++)
+// {
+//     if (solveItArray[i]!=randWordArray[i])
+//     {
+//        return false;
+//     }
+// }
+// return true;
+
+         // if (solveItArray == randWordArray){
+         //    console.log("it works");
+         // } else { console.log("it doesnt work")};
+
+
+         // var inputKeyLi = document.getElementById("orderList");  
+
+         // console.log(inputKeyLi);
+
+      //   var inputFormArray = .querySelectorAll("li");
+
+      //    console.log(inputFormArray[o]);
+
+      //  for (var i = 0; i < randWord.length; i++) {
+
+      //    console.log(inputFormArray[i]);
+      //  }
+
+
+
+
+
+
+
+
+
+         //---------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      //TODO:using query selector
+// var inputArray = document.querySelectorAll("input");
+//       inputArray[0].style.borderColor = "red";
+//       inputArray[0].addEventListener("blur", (event) => {
+//          var hit = event.target.value;
+//          if (hit !== ""){
+//          alert("are you sure you want to submit this letter");
+//          } else {
+//          }
+//       })
+      </script>
+
     
-      var word = "hello";
-      console.log(word[0]);
-   </script>
    
 </body>
 </html>

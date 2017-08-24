@@ -1,0 +1,40 @@
+#solveForm {
+			max-width: 100px;
+		}
+
+		button {
+			margin: 5px;
+		}
+
+		.hangicon {
+			width: 100px;
+			height: auto;
+		}
+
+		h1 {
+			font-size: 70px;
+			text-align: center;
+		}
+
+		h2 {
+			text-align: center;
+			margin-top: 40px;
+		}
+
+		input {
+			margin: 8px;
+			max-width: 60px;
+			border-radius: 4px;
+			text-align: center;
+			color: green;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+
+
+		#lettersDiv {
+			display: flex;
+			justify-content: center;
+			margin-top: 60px;
+		}
